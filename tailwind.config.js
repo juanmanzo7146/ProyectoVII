@@ -9,13 +9,17 @@ export default {
         './resources/views/**/*.blade.php',
     ],
 
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
-        },
-    },
+   theme: {
+  extend: {
+    colors: {
+      cocina: {
+        primary: '#f97316',
+        secondary: '#ea580c',
+        accent: '#c2410c',
+      }
+    }
+  }
+},
 
     plugins: [forms],
 };

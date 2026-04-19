@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Category;
 
 class CategorySeeder extends Seeder
 {
@@ -43,13 +43,7 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            DB::table('categories')->insert([
-                'name' => $category['name'],
-                'slug' => $category['slug'],
-                'description' => $category['description'],
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
+            Category::create($category);
         }
     }
 }
